@@ -1,0 +1,25 @@
+{
+    "G74": {
+        "symbolMotto": "Symbol / Motto",
+        "player": "Player",
+        "character": "Character",
+        "class": "Class",
+        "currentXp": "Current XP",
+        "neededXp": "Needed XP",
+        "level": "Level",
+        "strength": "Strength",
+        "intelligence": "Intelligence",
+        "intuition": "Intuition",
+        "dexterity": "Dexterity",
+        "constitution": "Constitution",
+        "charisma": "Charisma",
+        "notes": "Notes (special abilities / spells, Etc)",
+        "cb": "CB",
+        "save": "Save",
+        "hp": "HP",
+        "ac": "AC",
+        "roll": "Roll",
+        "abilityRoll": "Ability Roll",
+        "savingThrow": "Saving Throw"
+    }
+}
