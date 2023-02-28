@@ -1,214 +1,264 @@
 {{log 'Gargoyle-74-template' this}}
-<form>
+<form class="g74-form">
+    <div style="text-align: center; height: 75px;">
+        <img src="modules/gargoyle-74/images/gargoyle-logo.png" alt="Logo" width="200" height="100" style="border:0;">
+    </div>
+
     <nav class="sheet-edit-tabs sheet-tabs tabs" data-group="mode">
         <a data-action="play" data-edit="disabled">Play</a>
         <a data-action="edit" data-edit="enabled">Edit</a>
     </nav>
 
-    <div class="section-row">
-        <div class="section1">
-            <label for="g74.motto" class="textarea-label">{{localize "G74.symbolMotto"}}</label>
-            <textarea class="textarea" id="g74.motto" name="g74.motto" >{{actor.flags.world.g74.motto}}</textarea>
-        </div>
-        <div class="section2">
-            <div class="input-column">
-                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
-                <div class="input-group">
-                    <label for="g74.player" style="width: 40%">{{localize "G74.player"}}:</label>
-                    <input type="text" id="g74.player" name="g74.player" value="{{actor.flags.world.g74.player}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+    <div class="g74-body">
+        <div class="section-row">
+            <div class="section1">
+                <label for="g74.motto" class="textarea-label">{{localize "G74.symbolMotto"}}</label>
+                <textarea class="textarea" id="g74.motto" name="g74.motto" >{{actor.flags.world.g74.motto}}</textarea>
+            </div>
+            <div class="section1">
+                <div class="input-column">
+                    <div class="input-group">
+                        <label for="g74.player" style="width: 40%">{{localize "G74.player"}}:</label>
+                        <input type="text" id="g74.player" name="g74.player" value="{{actor.flags.world.g74.player}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
+                    <div class="input-group">
+                        <label for="name" style="width: 40%">{{localize "G74.character"}}:</label>
+                        <input type="text" id="name" name="name" value="{{actor.name}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
+                    <div class="input-group">
+                        <label for="g74.class" style="width: 40%">{{localize "G74.class"}}:</label>
+                        <input type="text" id="g74.class" name="g74.class" value="{{actor.flags.world.g74.class}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
+                    <div class="input-group">
+                        <label for="g74.currentXp" style="width: 40%">{{localize "G74.currentXp"}}:</label>
+                        <input type="text" id="g74.currentXp" name="g74.currentXp" value="{{actor.flags.world.g74.currentXp}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
+                    <div class="input-group">
+                        <label for="g74.neededXp" style="width: 40%">{{localize "G74.neededXp"}}:</label>
+                        <input type="text" id="g74.neededXp" name="g74.neededXp" value="{{actor.flags.world.g74.neededXp}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
+                    <div class="input-group">
+                        <label for="g74.level" style="width: 40%">{{localize "G74.level"}}:</label>
+                        <input type="text" id="g74.level" name="g74.level" value="{{actor.flags.world.g74.level}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="name" style="width: 40%">{{localize "G74.character"}}:</label>
-                    <input type="text" id="name" name="name" value="{{actor.name}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                </div>
-                <div class="input-group">
-                    <label for="g74.class" style="width: 40%">{{localize "G74.class"}}:</label>
-                    <input type="text" id="g74.class" name="g74.class" value="{{actor.flags.world.g74.class}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                </div>
-                <div class="input-group">
-                    <label for="g74.currentXp" style="width: 40%">{{localize "G74.currentXp"}}:</label>
-                    <input type="text" id="g74.currentXp" name="g74.currentXp" value="{{actor.flags.world.g74.currentXp}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                </div>
-                <div class="input-group">
-                    <label for="g74.neededXp" style="width: 40%">{{localize "G74.neededXp"}}:</label>
-                    <input type="text" id="g74.neededXp" name="g74.neededXp" value="{{actor.flags.world.g74.neededXp}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                </div>
-                <div class="input-group">
-                    <label for="g74.level" style="width: 40%">{{localize "G74.level"}}:</label>
-                    <input type="text" id="g74.level" name="g74.level" value="{{actor.flags.world.g74.level}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section section3">
-        <div class="column">
-            <div class="row" data-ability="strength">
-                <label for="g74.strength">{{localize "G74.strength"}}:</label>
-                <input type="text" id="g74.strength" name="g74.strength" value="{{actor.flags.world.g74.strength}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-            <div class="row" data-ability="intelligence">
-                <label for="g74.intelligence">{{localize "G74.intelligence"}}:</label>
-                <input type="text" id="g74.intelligence" name="g74.intelligence" value="{{actor.flags.world.g74.intelligence}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-            <div class="row" data-ability="intuition">
-                <label for="g74.intuition">{{localize "G74.intuition"}}:</label>
-                <input type="text" id="g74.intuition" name="g74.intuition" value="{{actor.flags.world.g74.intuition}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="row" data-ability="dexterity">
-                <label for="g74.dexterity">{{localize "G74.dexterity"}}:</label>
-                <input type="text" id="g74.dexterity" name="g74.dexterity" value="{{actor.flags.world.g74.dexterity}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-            <div class="row" data-ability="constitution">
-                <label for="g74.constitution">{{localize "G74.constitution"}}:</label>
-                <input type="text" id="g74.constitution" name="g74.constitution" value="{{actor.flags.world.g74.constitution}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-            <div class="row" data-ability="charisma">
-                <label for="g74.charisma">{{localize "G74.charisma"}}:</label>
-                <input type="text" id="g74.charisma" name="g74.charisma" value="{{actor.flags.world.g74.charisma}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
-                <div data-action="roll">{{localize "G74.roll"}}</div>
-                <div data-action="save">{{localize "G74.save"}}</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="circle-row">
-        <div class="column">
-            <div class="circle-input">
-                <input type="number" class="input-field" name="g74.cb" value="{{actor.flags.world.g74.cb}}" >
-                <div class="circle2"></div>
-            </div>
-            <div>{{localize "G74.cb"}}</div>
-        </div>
-
-        <div class="column">
-            <div class="circle-input">
-                <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" >
-                <div class="circle2"></div>
-            </div>
-            <div>{{localize "G74.save"}}</div>
-        </div>
-
-        <div class="column">
-            <div>{{localize "G74.hp"}}</div>
-            <div class="circle-input">
-                <input type="number" class="input-field" name="g74.tempHp" value="{{actor.flags.world.g74.tempHp}}" >
-                <div class="circle2"></div>
-            </div>
-            <div class="circle-input">
-                <input type="number" class="input-field" name="g74.hp" value="{{actor.flags.world.g74.hp}}" >
-                <div class="circle2"></div>
             </div>
         </div>
 
-        <div class="column">
-            <div class="circle-input">
-                <div class="circle2">
-                    <input type="number" class="circle4-input" name="g74.ac" value="{{actor.flags.world.g74.ac}}" >
+        <div class="section section3">
+            <div class="column">
+                <div class="row" data-ability="strength">
+                    <label for="g74.strength">{{localize "G74.strength"}}:</label>
+                    <input type="text" id="g74.strength" name="g74.strength" value="{{actor.flags.world.g74.strength}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="modules/gargoyle-74/images/gargoyle-dice.png" width="48" height="36" style="border:0;"/>
+                </div>
+                <div class="row" data-ability="intelligence">
+                    <label for="g74.intelligence">{{localize "G74.intelligence"}}:</label>
+                    <input type="text" id="g74.intelligence" name="g74.intelligence" value="{{actor.flags.world.g74.intelligence}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="modules/gargoyle-74/images/gargoyle-dice.png" width="48" height="36" style="border:0;"/>
+                </div>
+                <div class="row" data-ability="intuition">
+                    <label for="g74.intuition">{{localize "G74.intuition"}}:</label>
+                    <input type="text" id="g74.intuition" name="g74.intuition" value="{{actor.flags.world.g74.intuition}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="modules/gargoyle-74/images/gargoyle-dice.png" width="48" height="36" style="border:0;"/>
                 </div>
             </div>
-            <div>{{localize "G74.ac"}}</div>
+            <div class="column">
+                <div class="row" data-ability="dexterity">
+                    <label for="g74.dexterity">{{localize "G74.dexterity"}}:</label>
+                    <input type="text" id="g74.dexterity" name="g74.dexterity" value="{{actor.flags.world.g74.dexterity}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="icons/dice/d20black.svg" width="36" height="36" style="border:0;"/>
+                </div>
+                <div class="row" data-ability="constitution">
+                    <label for="g74.constitution">{{localize "G74.constitution"}}:</label>
+                    <input type="text" id="g74.constitution" name="g74.constitution" value="{{actor.flags.world.g74.constitution}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="icons/dice/d20black.svg" width="36" height="36" style="border:0;"/>
+                </div>
+                <div class="row" data-ability="charisma">
+                    <label for="g74.charisma">{{localize "G74.charisma"}}:</label>
+                    <input type="text" id="g74.charisma" name="g74.charisma" value="{{actor.flags.world.g74.charisma}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                    <img data-action="roll" src="icons/dice/d20black.svg" width="36" height="36" style="border:0;"/>
+                </div>
+            </div>
         </div>
 
-        <div class="circle image"></div>
-    </div>
+        <div class="circle-row">
+            <span></span>
+            
+            <div class="column">
+                <div class="circle-input">
+                    <input type="number" class="input-field" name="g74.cb" value="{{actor.flags.world.g74.cb}}" >
+                    <div class="circle2"></div>
+                </div>
+                <div>{{localize "G74.cb"}}</div>
+            </div>
 
-    <div class="section-row">
+            <div class="column">
+                <div class="circle-input">
+                    <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" >
+                    <div class="circle2"></div>
+                </div>
+                <div>{{localize "G74.save"}}</div>
+            </div>
+
+            <div class="column">
+                <div class="circle-input">
+                    <div class="circle2">
+                        <input type="number" class="circle4-input" name="g74.currentHp" value="{{actor.flags.world.g74.currentHp}}" >
+                    </div>
+                </div>
+                <div>{{localize "G74.currentHp"}}</div>
+            </div>
+
+                        <div class="column">
+                <div class="circle-input">
+                    <div class="circle2">
+                        <input type="number" class="circle4-input" name="g74.maxHp" value="{{actor.flags.world.g74.maxHp}}" >
+                    </div>
+                </div>
+                <div>{{localize "G74.maxHp"}}</div>
+            </div>
+
+            <div class="column">
+                <div class="circle-input">
+                    <div class="circle2">
+                        <input type="number" class="circle4-input" name="g74.ac" value="{{actor.flags.world.g74.ac}}" >
+                    </div>
+                </div>
+                <div>{{localize "G74.ac"}}</div>
+            </div>
+
+            <div class="circle image"></div>
+
+            <span></span>
+        </div>
+
+        <div class="section-row">
         <div class="section1">
             <label for="g74.notes" class="textarea-label">{{localize "G74.notes"}}</label>
             <textarea class="textarea" id="g74.notes" name="g74.notes" >{{actor.flags.world.g74.notes}}</textarea>
         </div>
-        <div class="section2">
+        <div class="section1">
+            <div class="row">
+                <div>{{localize "G74.slots"}}: </div>
+                <div>{{actor.flags.world.g74.slots}}</div>
+            </div>
             <div class="row">
                 <div class="input-column">
                     <div class="input-group">
-                        <label for="g74.slot.one" style="width: 30%">1</label>
-                        <input  type="text" id="g74.slot.one" name="g74.slot.one" value="{{actor.flags.world.g74.slot.one}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.1.text" style="width: 30%">1</label>
+                        <input  type="text" id="g74.slot.1.text" name="g74.slot.1.text" value="{{actor.flags.world.g74.slot.1.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.1.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.two" style="width: 30%">2</label>
-                        <input  type="text" id="g74.slot.two" name="g74.slot.two" value="{{actor.flags.world.g74.slot.two}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.2.text" style="width: 30%">2</label>
+                        <input  type="text" id="g74.slot.2.text" name="g74.slot.2.text" value="{{actor.flags.world.g74.slot.2.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.2.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.three" style="width: 30%">3</label>
-                        <input  type="text" id="g74.slot.three" name="g74.slot.three" value="{{actor.flags.world.g74.slot.three}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.3.text" style="width: 30%">3</label>
+                        <input  type="text" id="g74.slot.3.text" name="g74.slot.3.text" value="{{actor.flags.world.g74.slot.3.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.3.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.four" style="width: 30%">4</label>
-                        <input  type="text" id="g74.slot.four" name="g74.slot.four" value="{{actor.flags.world.g74.slot.four}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.4.text" style="width: 30%">4</label>
+                        <input  type="text" id="g74.slot.4.text" name="g74.slot.4.text" value="{{actor.flags.world.g74.slot.4.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.4.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.five" style="width: 30%">5</label>
-                        <input  type="text" id="g74.slot.five" name="g74.slot.five" value="{{actor.flags.world.g74.slot.five}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.5.text" style="width: 30%">5</label>
+                        <input  type="text" id="g74.slot.5.text" name="g74.slot.5.text" value="{{actor.flags.world.g74.slot.5.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.5.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.six" style="width: 30%">6</label>
-                        <input  type="text" id="g74.slot.six" name="g74.slot.six" value="{{actor.flags.world.g74.slot.six}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.6.text" style="width: 30%">6</label>
+                        <input  type="text" id="g74.slot.6.text" name="g74.slot.6.text" value="{{actor.flags.world.g74.slot.6.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.6.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.seven" style="width: 30%">7</label>
-                        <input  type="text" id="g74.slot.seven" name="g74.slot.seven" value="{{actor.flags.world.g74.slot.seven}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.7.text" style="width: 30%">7</label>
+                        <input  type="text" id="g74.slot.7.text" name="g74.slot.7.text" value="{{actor.flags.world.g74.slot.7.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.7.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.eight" style="width: 30%">8</label>
-                        <input  type="text" id="g74.slot.eight" name="g74.slot.eight" value="{{actor.flags.world.g74.slot.eight}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.8.text" style="width: 30%">8</label>
+                        <input  type="text" id="g74.slot.8.text" name="g74.slot.8.text" value="{{actor.flags.world.g74.slot.8.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.8.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.nine" style="width: 30%">9</label>
-                        <input  type="text" id="g74.slot.nine" name="g74.slot.nine" value="{{actor.flags.world.g74.slot.nine}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.9.text" style="width: 30%">9</label>
+                        <input  type="text" id="g74.slot.9.text" name="g74.slot.9.text" value="{{actor.flags.world.g74.slot.9.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.9.disabled}}disabled{{/if}}
+                        >
                     </div>
                 </div>
                 <div class="input-column">
                     <div class="input-group">
-                        <label for="g74.slot.ten" style="width: 30%">10</label>
-                        <input  type="text" id="g74.slot.ten" name="g74.slot.ten" value="{{actor.flags.world.g74.slot.ten}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.10.text" style="width: 30%">10</label>
+                        <input  type="text" id="g74.slot.10.text" name="g74.slot.10.text" value="{{actor.flags.world.g74.slot.10.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.10.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.eleven" style="width: 30%">11</label>
-                        <input  type="text" id="g74.slot.eleven" name="g74.slot.eleven" value="{{actor.flags.world.g74.slot.eleven}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.11.text" style="width: 30%">11</label>
+                        <input  type="text" id="g74.slot.11.text" name="g74.slot.11.text" value="{{actor.flags.world.g74.slot.11.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.11.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.twelve" style="width: 30%">12</label>
-                        <input  type="text" id="g74.slot.twelve" name="g74.slot.twelve" value="{{actor.flags.world.g74.slot.twelve}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.12.text" style="width: 30%">12</label>
+                        <input  type="text" id="g74.slot.12.text" name="g74.slot.12.text" value="{{actor.flags.world.g74.slot.12.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.12.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.thirteen" style="width: 30%">13</label>
-                        <input  type="text" id="g74.slot.thirteen" name="g74.slot.thirteen" value="{{actor.flags.world.g74.slot.thirteen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.13.text" style="width: 30%">13</label>
+                        <input  type="text" id="g74.slot.13.text" name="g74.slot.13.text" value="{{actor.flags.world.g74.slot.13.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.13.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.fourteen" style="width: 30%">14</label>
-                        <input  type="text" id="g74.slot.fourteen" name="g74.slot.fourteen" value="{{actor.flags.world.g74.slot.fourteen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.14.text" style="width: 30%">14</label>
+                        <input  type="text" id="g74.slot.14.text" name="g74.slot.14.text" value="{{actor.flags.world.g74.slot.14.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.14.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.fiftheen" style="width: 30%">15</label>
-                        <input  type="text" id="g74.slot.fiftheen" name="g74.slot.fiftheen" value="{{actor.flags.world.g74.slot.fiftheen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.15.text" style="width: 30%">15</label>
+                        <input  type="text" id="g74.slot.15.text" name="g74.slot.15.text" value="{{actor.flags.world.g74.slot.15.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.15.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.sixteen" style="width: 30%">16</label>
-                        <input  type="text" id="g74.slot.sixteen" name="g74.slot.sixteen" value="{{actor.flags.world.g74.slot.sixteen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.16.text" style="width: 30%">16</label>
+                        <input  type="text" id="g74.slot.16.text" name="g74.slot.16.text" value="{{actor.flags.world.g74.slot.16.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.16.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.seventeen" style="width: 30%">17</label>
-                        <input  type="text" id="g74.slot.seventeen" name="g74.slot.seventeen" value="{{actor.flags.world.g74.slot.seventeen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.17.text" style="width: 30%">17</label>
+                        <input  type="text" id="g74.slot.17.text" name="g74.slot.17.text" value="{{actor.flags.world.g74.slot.17.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.17.disabled}}disabled{{/if}}
+                        >
                     </div>
                     <div class="input-group">
-                        <label for="g74.slot.eighteen" style="width: 30%">18</label>
-                        <input  type="text" id="g74.slot.eighteen" name="g74.slot.eighteen" value="{{actor.flags.world.g74.slot.eighteen}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
+                        <label for="g74.slot.18.text" style="width: 30%">18</label>
+                        <input  type="text" id="g74.slot.18.text" name="g74.slot.18.text" value="{{actor.flags.world.g74.slot.18.text}}" 
+                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.18.disabled}}disabled{{/if}}
+                        >
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     </div>
 </form>

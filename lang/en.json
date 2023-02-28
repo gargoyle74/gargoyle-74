@@ -17,9 +17,13 @@
         "cb": "CB",
         "save": "Save",
         "hp": "HP",
+        "currentHp": "Current HP",
+        "maxHp": "Max HP",
         "ac": "AC",
-        "roll": "Roll",
         "abilityRoll": "Ability Roll",
-        "savingThrow": "Saving Throw"
+        "savingThrow": "Saving Throw",
+        "slots": "Slots",
+        "success": "Sucess",
+        "failure": "Failure"
     }
 }

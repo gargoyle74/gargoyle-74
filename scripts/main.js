@@ -32,8 +32,6 @@ class Gargoyle74 {
     }
 }
 
-// Ruler.prototype._getSegmentLabel =
-
 class Gargoyle74ActorSheet extends ActorSheet {
     /** @override */
     static get defaultOptions () {
@@ -44,9 +42,8 @@ class Gargoyle74ActorSheet extends ActorSheet {
             template: path,
             width: 600,
             height: 700,
-            resizable: true,
+            resizable: false,
             submitOnChange: true,
-            resizable: true,
         })
     }
 
@@ -57,9 +54,13 @@ class Gargoyle74ActorSheet extends ActorSheet {
 
         for (let key in formData) {
             if (key.includes('g74')) {
-                this.actor.setFlag('world', key, formData[key])
+                await this.actor.setFlag('world', key, formData[key])
             }
         }
+
+        // update number of available slots in case 
+        // strength or constitution has been updated
+        await this.setSlots()
 
         this.render();
     }
@@ -85,11 +86,7 @@ class Gargoyle74ActorSheet extends ActorSheet {
                 break;
             }
             case 'roll': {
-                abilityRoll(this.actor, game.i18n.localize("G74.abilityRoll"), game.i18n.localize("G74." + ability))
-                break;
-            }
-            case 'save': {
-                abilityRoll(this.actor, game.i18n.localize("G74.savingThrow"), game.i18n.localize("G74." + ability))
+                await abilityRoll(this.actor, ability)
                 break;
             }
             default: {
@@ -99,18 +96,39 @@ class Gargoyle74ActorSheet extends ActorSheet {
         }
     }
 
+    async setSlots() {
+        const strength = Number(this.actor.flags.world.g74.strength)
+        const constitution = Number(this.actor.flags.world.g74.constitution)
+
+        const slots = Math.floor((strength + constitution) / 2)
+
+        await this.actor.setFlag('world', 'g74.slots', slots)
+
+        for (let key in this.actor.flags.world.g74.slot) {
+            this.actor.setFlag('world', 'g74.slot.' + key + '.disabled', (Number(key) > slots))
+        }
+    }
 }
 
-async function abilityRoll(actor, type, ability, html) {
+async function abilityRoll(actor, ability, html) {
     let rollEquation = "1D20";
 
 	let roll = new Roll(rollEquation, actor.getRollData());
 
-	roll.evaluate().then(function(result) {		
+	roll.evaluate().then(function(result) {	
+        const success = roll.total >= actor.flags.world.g74.save
+
+        let flavor = game.i18n.localize("G74." + ability)
+        if(success) {
+            flavor += " " + game.i18n.localize("G74.success")
+        } else {
+            flavor += " " + game.i18n.localize("G74.failure")
+        }
+
 		result.toMessage({
 			speaker: ChatMessage.getSpeaker({ actor: actor }),
-			flavor: type + '(' + ability + ')',
-			borderColor: 0x00FF00,
+			flavor: flavor,
+			borderColor: success ? "0x00FF00" : "0xFF0000",
 	    });
     })
 }
