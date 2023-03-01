@@ -24,6 +24,16 @@
         "savingThrow": "Saving Throw",
         "slots": "Slots",
         "success": "Sucess",
-        "failure": "Failure"
+        "failure": "Failure",
+        "rollModifier": "Add Modifier",
+        "modifier": "Modifier",
+        "gold": "Gold!",
+        "roll": "Roll",
+        "settings": {
+            "lockSlots": {
+                "Name": "Lock unavailable slots?",
+                "Hint": "Players will be unable to edit more slots than their average of Strength and Constitution"
+            }
+        }
     }
 }

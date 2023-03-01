@@ -93,12 +93,17 @@
                 <div>{{localize "G74.cb"}}</div>
             </div>
 
-            <div class="column">
-                <div class="circle-input">
-                    <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" >
-                    <div class="circle2"></div>
+            <div class="row">
+                <div class="column">
+                    <div class="circle-input">
+                        <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" >
+                        <div class="circle2"></div>
+                    </div>
+                    <div>{{localize "G74.save"}}</div>
                 </div>
-                <div>{{localize "G74.save"}}</div>
+                <div class="row">
+                    <img data-action="save" src="icons/dice/d20black.svg" width="36" height="36" style="border:0;"/>
+                </div>
             </div>
 
             <div class="column">
@@ -110,7 +115,7 @@
                 <div>{{localize "G74.currentHp"}}</div>
             </div>
 
-                        <div class="column">
+            <div class="column">
                 <div class="circle-input">
                     <div class="circle2">
                         <input type="number" class="circle4-input" name="g74.maxHp" value="{{actor.flags.world.g74.maxHp}}" >
@@ -128,7 +133,14 @@
                 <div>{{localize "G74.ac"}}</div>
             </div>
 
-            <div class="circle image"></div>
+            <div class="column">
+                <div class="circle-input">
+                    <div class="circle2">
+                        <input type="number" class="circle4-input" name="g74.gold" value="{{actor.flags.world.g74.gold}}" >
+                    </div>
+                </div>
+                <div>{{localize "G74.gold"}}</div>
+            </div>
 
             <span></span>
         </div>
