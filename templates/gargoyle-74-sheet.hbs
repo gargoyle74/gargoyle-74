@@ -87,7 +87,7 @@
             
             <div class="column">
                 <div class="circle-input">
-                    <input type="number" class="input-field" name="g74.cb" value="{{actor.flags.world.g74.cb}}" >
+                    <input type="number" class="input-field" name="g74.cb" value="{{actor.flags.world.g74.cb}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
                     <div class="circle2"></div>
                 </div>
                 <div>{{localize "G74.cb"}}</div>
@@ -96,7 +96,7 @@
             <div class="row">
                 <div class="column">
                     <div class="circle-input">
-                        <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" >
+                        <input type="number" class="input-field" name="g74.save" value="{{actor.flags.world.g74.save}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
                         <div class="circle2"></div>
                     </div>
                     <div>{{localize "G74.save"}}</div>
@@ -118,7 +118,7 @@
             <div class="column">
                 <div class="circle-input">
                     <div class="circle2">
-                        <input type="number" class="circle4-input" name="g74.maxHp" value="{{actor.flags.world.g74.maxHp}}" >
+                        <input type="number" class="circle4-input" name="g74.maxHp" value="{{actor.flags.world.g74.maxHp}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
                     </div>
                 </div>
                 <div>{{localize "G74.maxHp"}}</div>
@@ -127,7 +127,7 @@
             <div class="column">
                 <div class="circle-input">
                     <div class="circle2">
-                        <input type="number" class="circle4-input" name="g74.ac" value="{{actor.flags.world.g74.ac}}" >
+                        <input type="number" class="circle4-input" name="g74.ac" value="{{actor.flags.world.g74.ac}}" {{#unless actor.flags.world.g74.edit}}disabled{{/unless}}>
                     </div>
                 </div>
                 <div>{{localize "G74.ac"}}</div>
@@ -160,55 +160,55 @@
                     <div class="input-group">
                         <label for="g74.slot.1.text" style="width: 30%">1</label>
                         <input  type="text" id="g74.slot.1.text" name="g74.slot.1.text" value="{{actor.flags.world.g74.slot.1.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.1.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.1.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.2.text" style="width: 30%">2</label>
                         <input  type="text" id="g74.slot.2.text" name="g74.slot.2.text" value="{{actor.flags.world.g74.slot.2.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.2.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.2.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.3.text" style="width: 30%">3</label>
                         <input  type="text" id="g74.slot.3.text" name="g74.slot.3.text" value="{{actor.flags.world.g74.slot.3.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.3.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.3.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.4.text" style="width: 30%">4</label>
                         <input  type="text" id="g74.slot.4.text" name="g74.slot.4.text" value="{{actor.flags.world.g74.slot.4.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.4.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.4.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.5.text" style="width: 30%">5</label>
                         <input  type="text" id="g74.slot.5.text" name="g74.slot.5.text" value="{{actor.flags.world.g74.slot.5.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.5.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.5.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.6.text" style="width: 30%">6</label>
                         <input  type="text" id="g74.slot.6.text" name="g74.slot.6.text" value="{{actor.flags.world.g74.slot.6.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.6.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.6.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.7.text" style="width: 30%">7</label>
                         <input  type="text" id="g74.slot.7.text" name="g74.slot.7.text" value="{{actor.flags.world.g74.slot.7.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.7.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.7.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.8.text" style="width: 30%">8</label>
                         <input  type="text" id="g74.slot.8.text" name="g74.slot.8.text" value="{{actor.flags.world.g74.slot.8.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.8.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.8.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.9.text" style="width: 30%">9</label>
                         <input  type="text" id="g74.slot.9.text" name="g74.slot.9.text" value="{{actor.flags.world.g74.slot.9.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.9.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.9.disabled}}disabled{{/if}}
                         >
                     </div>
                 </div>
@@ -216,55 +216,55 @@
                     <div class="input-group">
                         <label for="g74.slot.10.text" style="width: 30%">10</label>
                         <input  type="text" id="g74.slot.10.text" name="g74.slot.10.text" value="{{actor.flags.world.g74.slot.10.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.10.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.10.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.11.text" style="width: 30%">11</label>
                         <input  type="text" id="g74.slot.11.text" name="g74.slot.11.text" value="{{actor.flags.world.g74.slot.11.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.11.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.11.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.12.text" style="width: 30%">12</label>
                         <input  type="text" id="g74.slot.12.text" name="g74.slot.12.text" value="{{actor.flags.world.g74.slot.12.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.12.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.12.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.13.text" style="width: 30%">13</label>
                         <input  type="text" id="g74.slot.13.text" name="g74.slot.13.text" value="{{actor.flags.world.g74.slot.13.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.13.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.13.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.14.text" style="width: 30%">14</label>
                         <input  type="text" id="g74.slot.14.text" name="g74.slot.14.text" value="{{actor.flags.world.g74.slot.14.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.14.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.14.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.15.text" style="width: 30%">15</label>
                         <input  type="text" id="g74.slot.15.text" name="g74.slot.15.text" value="{{actor.flags.world.g74.slot.15.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.15.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.15.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.16.text" style="width: 30%">16</label>
                         <input  type="text" id="g74.slot.16.text" name="g74.slot.16.text" value="{{actor.flags.world.g74.slot.16.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.16.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.16.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.17.text" style="width: 30%">17</label>
                         <input  type="text" id="g74.slot.17.text" name="g74.slot.17.text" value="{{actor.flags.world.g74.slot.17.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.17.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.17.disabled}}disabled{{/if}}
                         >
                     </div>
                     <div class="input-group">
                         <label for="g74.slot.18.text" style="width: 30%">18</label>
                         <input  type="text" id="g74.slot.18.text" name="g74.slot.18.text" value="{{actor.flags.world.g74.slot.18.text}}" 
-                            {{#unless actor.flags.world.g74.edit}}disabled{{/unless}} {{#if actor.flags.world.g74.slot.18.disabled}}disabled{{/if}}
+                            {{#if actor.flags.world.g74.slot.18.disabled}}disabled{{/if}}
                         >
                     </div>
                 </div>
