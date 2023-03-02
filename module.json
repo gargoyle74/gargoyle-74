@@ -25,9 +25,9 @@
             "path": "lang/en.json"
         }
     ],
-    "url": "",
-    "manifest": "",
-    "download": "",
+    "url": "https://github.com/gargoyle74/gargoyle-74",
+    "manifest": "https://github.com/gargoyle74/gargoyle-74/blob/main/module.json",
+    "download": "https://github.com/gargoyle74/gargoyle-74",
     "license": "",
     "changelog": "",
     "bugs": ""
