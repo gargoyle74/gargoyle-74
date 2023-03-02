@@ -162,7 +162,7 @@ async function createPopOut(type, actor, ability) {
 	const token = actor.token;
 
 	const templateData = {
-		actor: actor.data,
+		// actor: actor.data,
 		tokenId: token?.uuid || null,
 	};
 
@@ -204,10 +204,10 @@ async function abilityRoll(type, actor, ability, html) {
 
 	let roll = new Roll(rollEquation, actor.getRollData());
 
-	roll.evaluate().then(function(result) {
+	await roll.evaluate().then(function(result) {
         switch(type) {
             case 'roll': {
-                const success = roll.total <= actor.flags.world.g74.save
+                const success = roll.total <= actor.flags.world.g74[ability]
 
                 let flavor = game.i18n.localize("G74." + ability)
                 if(success) {
