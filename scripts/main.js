@@ -79,7 +79,7 @@ class Gargoyle74ActorSheet extends ActorSheet {
             classes: ['sheet', 'actor'],
             template: path,
             width: 600,
-            height: 700,
+            height: 720,
             resizable: false,
             submitOnChange: true,
         })
@@ -107,6 +107,25 @@ class Gargoyle74ActorSheet extends ActorSheet {
         super.activateListeners(html);
 
         html.on('click', "[data-action]", this._handleButtonClick.bind(this));
+
+
+        // Handle changing tabs
+        // Select the tabs and tab bodies
+        const $tabs = $(".sheet-tabs .item");
+        const $tabBodies = $(".sheet-body .tab");
+
+        // Handle clicking a tab
+        $tabs.on('click', function () {
+            const $tab = $(this);
+            const tabGroup = $tab.parents('.sheet-tabs').attr('data-group');
+            const tabName = $tab.attr('data-tab');
+
+            // Hide all tab bodies in this group
+            $tabBodies.filter(`[data-group="${tabGroup}"]`).removeClass('active');
+
+            // Show the selected tab body
+            $(`.tab-body[data-group="${tabGroup}"][data-tab="${tabName}"]`).addClass('active');
+        });
     }
 
     async _handleButtonClick(event) {
@@ -172,6 +191,10 @@ async function abilityRoll(type, actor, ability, html) {
 
     const modifier = form.modifier.value
 
+    const successText = "<span style='color:green;'>" + game.i18n.localize("G74.success") + "</span>"
+    const failureText = "<span style='color:red;'>" + game.i18n.localize("G74.failure") + "</span>"
+
+
     let rollEquation = "1D20" 
     if (modifier > 0) {
         rollEquation += ' + ' + modifier
@@ -188,9 +211,9 @@ async function abilityRoll(type, actor, ability, html) {
 
                 let flavor = game.i18n.localize("G74." + ability)
                 if(success) {
-                    flavor += " " + game.i18n.localize("G74.success")
+                    flavor += " " + successText
                 } else {
-                    flavor += " " + game.i18n.localize("G74.failure")
+                    flavor += " " + failureText
                 }
 
                 result.toMessage({
@@ -206,9 +229,9 @@ async function abilityRoll(type, actor, ability, html) {
 
                 let flavor = game.i18n.localize("G74.save")
                 if(success) {
-                    flavor += " " + game.i18n.localize("G74.success")
+                    flavor += " " + successText
                 } else {
-                    flavor += " " + game.i18n.localize("G74.failure")
+                    flavor += " " + failureText
                 }
 
                 result.toMessage({

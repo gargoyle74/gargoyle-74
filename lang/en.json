@@ -23,12 +23,17 @@
         "abilityRoll": "Ability Roll",
         "savingThrow": "Saving Throw",
         "slots": "Slots",
-        "success": "Sucess",
+        "success": "Success",
         "failure": "Failure",
         "rollModifier": "Add Modifier",
         "modifier": "Modifier",
         "gold": "Gold!",
         "roll": "Roll",
+        "tabs": {
+            "notes": "Notes",
+            "slots": "Slots",
+            "character": "Character"
+        },
         "settings": {
             "lockSlots": {
                 "Name": "Lock unavailable slots?",
