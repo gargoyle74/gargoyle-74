@@ -1,10 +1,10 @@
 # Gargoyle 74 character sheet module for foundryVTT.
 
-This basic module adds the gargoyle 74 character sheet. not as a system module but as an add-on.
+This basic module adds the gargoyle 74 character sheet. Not as a system module, but as an add-on top of a system.
 #
-a request to include it within foundry has been sent, so right now - you can manually install it.
+A request to include it within Foundry has been sent but not yet confirmed, so as of right now - you can only manually install it.
 #
-In order to install it as of now, manually install via the manifest URL
+install via the manifest URL:
 #
 https://github.com/gargoyle74/gargoyle-74/releases/download/v1.0.0/module.json
 #
