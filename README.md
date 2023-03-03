@@ -13,5 +13,6 @@ Since its a first release, there are probably bugs or a need to smooth things ov
 you can get the rules set from drivethruRPG at:
 https://www.drivethrurpg.com/product/427259/Gargoyle-74
 #
-contact me at bookofxal@gmail.com
-cheers!
+contact me at bookofxal@gmail.com, discord: user DMgargoyle#1309 or at the gargoyle 74 facebook group.
+#
+Cheers!
