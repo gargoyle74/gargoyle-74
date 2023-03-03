@@ -8,6 +8,8 @@ install via the manifest URL:
 #
 https://github.com/gargoyle74/gargoyle-74/releases/download/v1.0.0/module.json
 #
+Since its a first release, there are probably bugs or a need to smooth things over. please let me know.
+#
 you can get the rules set from drivethruRPG at:
 https://www.drivethrurpg.com/product/427259/Gargoyle-74
 #
