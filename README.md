@@ -1,4 +1,4 @@
-# Gargoyle 74 character sheet module for foundryVTT.
+# UNOFFICIAL Gargoyle 74 character sheet module for foundryVTT.
 
 This basic module adds the gargoyle 74 character sheet. Not as a system module, but as an add-on top of a system.
 #
