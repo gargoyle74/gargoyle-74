@@ -1,5 +1,5 @@
  This work of a character sheet module for Gargoyle 74 (a ruleset written by Tamir Levi & Omer Golan-Joel - published by stellagama publishing),      
- is under the premission of the authors and publishers and released under the GNU license written below.
+ is under the permission of the authors and publishers and released under the GNU license written below.
  
 The gargoyle 74 rule set in itself, includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at
 https://dnd.wizards. com/resources/systems-reference-document. 
