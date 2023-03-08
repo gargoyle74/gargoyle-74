@@ -1,7 +1,7 @@
 {
     "id": "gargoyle-74",
     "title": "Gargoyle 74",
-    "description": "Actor sheet for the Gargoyle 74 system",
+    "description": "Actor sheet for the Gargoyle 74 system. will not work if the system is SANDBOX.",
     "authors": [
         {
             "name": "bodiddley and tamir levi"
