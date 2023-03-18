@@ -1,233 +1,237 @@
 .flex-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-  }
-  
-  .section {
-    flex: 1;
-    margin-right: 10px;
-  }
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
 
-  .section-row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .section-row > div {
-    flex: 1;
-  }
-  
-  .red-box {
-    border: 2px solid red;
-    padding: 10px;
-  }
+.section {
+  flex: 1;
+  margin-right: 10px;
+}
 
-  .input-group {
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-    margin-bottom: 10px;
-    gap: -10px;
-  }
+.section-row {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .input-column {
-    align-items: right;
-  }
-  
-  .input-group label {
-    margin-right: 10px;
-  }
-  
-  .section1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-    border: 3px solid black;
-  }
+.section-row > div {
+  flex: 1;
+}
 
-  .section2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-    border: 3px solid black;
-    height: 300px;
-  }
-  
-  .textarea-label {
-    text-align: center;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-  
-  .textarea {
-    width: 80%;
-    height: 80%;
-    resize: none;
-  }
+.red-box {
+  border: 2px solid red;
+  padding: 10px;
+}
 
-  .section3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-    border: 3px solid black;
-  }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 10px;
-  }
-  
-  label {
-    margin-right: 10px;
-  }
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  margin-bottom: 10px;
+  gap: -10px;
+}
 
-  .circle-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0;
-    border: 3px solid black;
-    height: 75px;
-  }
-  
-  .circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-  }
-  
-  .big-circle {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .image {
-    background-image: url('../images/gargoyle.PNG');
-    background-size: cover;
-  }
-  
-  .half-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, red 50%, blue 50%);
-  }
+.input-column {
+  align-items: right;
+}
 
-  .circle-input {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .input-field {
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    width: 30px;
-    height: 30px;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .circle2 {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-  }
+.input-group label {
+  margin-right: 10px;
+}
 
-  .circle-input {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .circle-input .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-  }
-  
-  .circle-input input {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    width: 60px;
-    height: 60px;
-    padding: 0px;
-    margin: 0px;
-  }
-  
-  .circle-container {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid black;
-  }
-  
-  .top-half {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background-color: white;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-  }
-  
-  .bottom-half {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background-color: white;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-  }
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  border: 3px solid black;
+}
 
-  .g74-form {
-    overflow-y: hidden; /* this will add a scrollbar to the form container */
-  }
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  border: 3px solid black;
+  height: 300px;
+}
 
-  .g74-body {
-    overflow-y: auto;
-    height: auto;
-  }
-  
+.textarea-label {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.textarea {
+  width: 80%;
+  height: 80%;
+  resize: none;
+}
+
+.section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  border: 3px solid black;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.circle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  border: 3px solid black;
+  height: 75px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+}
+
+.big-circle {
+  width: 160px;
+  height: 160px;
+}
+
+.image {
+  background-image: url('../images/gargoyle.PNG');
+  background-size: cover;
+}
+
+.half-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, red 50%, blue 50%);
+}
+
+.circle-input {
+  position: relative;
+  display: inline-block;
+}
+
+.input-field {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.circle-input {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.circle-input .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.circle-input input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.circle-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+.top-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: white;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.bottom-half {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: white;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.g74-form {
+  overflow-y: hidden; /* this will add a scrollbar to the form container */
+}
+
+.g74-body {
+  overflow-y: auto;
+  height: auto;
+}
+
+.bold-underline {
+  font-weight: bold;
+  text-decoration: underline;
+}

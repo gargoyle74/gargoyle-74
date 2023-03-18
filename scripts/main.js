@@ -19,6 +19,13 @@ class Gargoyle74 {
             hint: `G74.settings.${this.SETTINGS.LOCK_SLOTS}.Hint`,
             onChange: () => Gargoyle74.setSlotsAll()
         })
+
+        Handlebars.registerHelper('ifEqual', function(v1, v2, options) {
+            if (v1 === v2) {
+              return options.fn(this);
+            }
+            return options.inverse(this);
+        });
     }
 
     static ID = 'gargoyle-74';
@@ -108,24 +115,7 @@ class Gargoyle74ActorSheet extends ActorSheet {
 
         html.on('click', "[data-action]", this._handleButtonClick.bind(this));
 
-
-        // Handle changing tabs
-        // Select the tabs and tab bodies
-        const $tabs = $(".sheet-tabs .item");
-        const $tabBodies = $(".sheet-body .tab");
-
-        // Handle clicking a tab
-        $tabs.on('click', function () {
-            const $tab = $(this);
-            const tabGroup = $tab.parents('.sheet-tabs').attr('data-group');
-            const tabName = $tab.attr('data-tab');
-
-            // Hide all tab bodies in this group
-            $tabBodies.filter(`[data-group="${tabGroup}"]`).removeClass('active');
-
-            // Show the selected tab body
-            $(`.tab-body[data-group="${tabGroup}"][data-tab="${tabName}"]`).addClass('active');
-        });
+        html.on('click', "[data-tab]", this._handleChangeTab.bind(this))
     }
 
     async _handleButtonClick(event) {
@@ -155,6 +145,12 @@ class Gargoyle74ActorSheet extends ActorSheet {
                 break;
             }
         }
+    }
+
+    async _handleChangeTab(event) {
+        const clickedElement = $(event.currentTarget);
+        const tab = clickedElement.data().tab;
+        this.actor.setFlag('world', 'g74.activeTab', tab)
     }
 }
 
