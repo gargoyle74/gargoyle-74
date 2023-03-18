@@ -1,4 +1,4 @@
-{{!-- {{log 'Gargoyle-74-template' this}} --}}
+{{!-- log 'Gargoyle-74-template' this --}}
 <form class="g74-form">
     <div style="text-align: center; height: 75px;">
         <img src="icons/svg/mystery-man-black.svg" alt="Logo" width="150" height="75" style="border:0;">
@@ -112,21 +112,21 @@
 
         {{!-- Sheet Tab Navigation --}}
         <nav class="sheet-tabs sheet-item-tabs tabs" data-group="primary">
-            <a class="item" data-tab="character">{{localize "G74.tabs.character"}}</a>
-            <a class="item" data-tab="slots">{{localize "G74.tabs.slots"}}</a>
-            <a class="item" data-tab="notes">{{localize "G74.tabs.notes"}}</a>
+            <a class="item {{#ifEqual actor.flags.world.g74.activeTab 'character'}}bold-underline{{/ifEqual}}" data-tab="character">{{localize "G74.tabs.character"}}</a>
+            <a class="item {{#ifEqual actor.flags.world.g74.activeTab 'slots'}}bold-underline{{/ifEqual}}" data-tab="slots">{{localize "G74.tabs.slots"}}</a>
+            <a class="item {{#ifEqual actor.flags.world.g74.activeTab 'notes'}}bold-underline{{/ifEqual}}" data-tab="notes">{{localize "G74.tabs.notes"}}</a>
         </nav>
 
         {{!-- Sheet Body --}}
         <section class="sheet-body">
-            <div class="tab tab-body" data-group="primary" data-tab="notes">
+            <div class="tab tab-body {{#ifEqual actor.flags.world.g74.activeTab 'notes'}}active{{/ifEqual}}" data-group="primary" data-tab="notes">
                 <div class="section2">
                     <label for="g74.notes" class="textarea-label">{{localize "G74.notes"}}</label>
                     <textarea class="textarea" id="g74.notes" name="g74.notes" >{{actor.flags.world.g74.notes}}</textarea>
                 </div>            
             </div>
 
-            <div class="tab tab-body" data-group="primary" data-tab="character">
+            <div class="tab tab-body {{#ifEqual actor.flags.world.g74.activeTab 'character'}}active{{/ifEqual}}" data-group="primary" data-tab="character">
                 <div class="section-row">
                     <div class="section1">
                         <label for="g74.motto" class="textarea-label">{{localize "G74.symbolMotto"}}</label>
@@ -163,7 +163,7 @@
                 </div>      
             </div>
 
-            <div class="tab tab-body active" data-group="primary" data-tab="slots">
+            <div class="tab tab-body {{#ifEqual actor.flags.world.g74.activeTab 'slots'}}active{{/ifEqual}}" data-group="primary" data-tab="slots">
                 <div class="section1">
                     <div class="row">
                         <div style="margin-right:3px;">{{localize "G74.slots"}}: </div>
