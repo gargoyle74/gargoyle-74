@@ -6,7 +6,7 @@ A request to include it within Foundry has been sent but not yet confirmed, so a
 #
 install via the manifest URL:
 #
-https://github.com/gargoyle74/gargoyle-74/releases/download/v1.0.1/module.json
+https://github.com/gargoyle74/gargoyle-74/releases/latest/download/module.json
 #
 Since its a first release, there are probably bugs or a need to smooth things over. please let me know.
 #
